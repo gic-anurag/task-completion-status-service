@@ -1,4 +1,4 @@
-module task-status-service
+module github.com/gic-anurag/task-completion-status-service
 
 go 1.19
 
