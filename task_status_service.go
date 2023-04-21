@@ -55,12 +55,11 @@ func (server Server) AddTaskCompletionStatus(taskStatusReq *TaskCompletionStatus
 	return &result, nil
 }
 
-func (server Server) FilterTaskCompletionStatus(searchFilter map[string]interface{}) (*Response, error) {
+func (server Server) FilterTaskCompletionStatus(taskStatusReq *TaskCompletionStatus) (*Response, error) {
 	var result Response
-	// payload := fmt.Sprint(searchFilter)
 	var buf bytes.Buffer
 
-	err := json.NewEncoder(&buf).Encode(searchFilter)
+	err := json.NewEncoder(&buf).Encode(taskStatusReq)
 
 	if err != nil {
 		return &result, err
