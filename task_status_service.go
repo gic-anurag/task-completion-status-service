@@ -55,7 +55,7 @@ func (server Server) AddTaskCompletionStatus(taskStatusReq *TaskCompletionStatus
 	return &result, nil
 }
 
-func (server Server) FilterTaskCompletionStatus(taskStatusReq *TaskCompletionStatus) (*Response, error) {
+func (server Server) FilterTaskCompletionStatus(taskStatusReq *filterRequest) (*Response, error) {
 	var result Response
 	var buf bytes.Buffer
 
