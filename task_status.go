@@ -16,7 +16,7 @@ type TaskCompletionStatus struct {
 	CreationDateTime   time.Time          `bson:"creationDateTime" json:"creationDateTime"`
 }
 
-type filterRequest struct {
+type FilterRequest struct {
 	Id                 string    `bson:"_id,omitempty" json:"id,omitempty"`
 	WorkflowName       string    `bson:"workflowName" json:"workflowName"`
 	CompletedEventName string    `bson:"completedEventName" json:"completedEventName"`
